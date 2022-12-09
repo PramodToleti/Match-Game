@@ -1,0 +1,29 @@
+.tab-name {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 767px) {
+  .tab-name {
+    font-size: 24px;
+  }
+}
+
+.active-tab {
+  border-bottom: 3px solid #fec653;
+}
+
+.tab-item-container {
+  width: 25%;
+  text-align: center;
+}
+
+.tab-switch-button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}

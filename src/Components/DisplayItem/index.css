@@ -1,0 +1,17 @@
+.thumbnail-image {
+  width: 100px;
+}
+
+@media screen and (min-width: 767px) {
+  .thumbnail-image {
+    width: 170px;
+  }
+}
+
+.thumbnail-img-button {
+  border: 0;
+  background-color: transparent;
+  margin-bottom: 5px;
+  cursor: pointer;
+  outline: none;
+}

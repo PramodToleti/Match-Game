@@ -1,0 +1,440 @@
+/* Nav Bar */
+
+.nav-bar {
+  height: 9vh;
+  background-color: #2c0e3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 767px) {
+  .nav-bar {
+    height: 12vh;
+  }
+}
+
+.nav-header {
+  width: 93%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.website-logo {
+  width: 130px;
+}
+
+@media screen and (min-width: 767px) {
+  .website-logo {
+    width: 160px;
+  }
+}
+
+.score-details-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 767px) {
+  .score-details-container {
+    gap: 30px;
+  }
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-heading {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.score {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #fec653;
+  font-weight: 600;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.timer-icon {
+  width: 15px;
+}
+
+.shake-clock {
+  animation: shake 1s linear infinite;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.timer-value {
+  color: #fec653;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.timer-red {
+  color: red;
+}
+
+@media screen and (min-width: 767px) {
+  .score-heading {
+    font-size: 20px;
+  }
+
+  .score {
+    font-size: 25px;
+  }
+
+  .timer-icon {
+    width: 25px;
+  }
+
+  .timer-value {
+    font-size: 22px;
+  }
+}
+
+/* Body */
+
+.bg-container {
+  min-height: 100vh;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-bg.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 766px) {
+  .body {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .body {
+    width: 90%;
+  }
+
+  .guess-image-container {
+    width: 75%;
+  }
+}
+
+.sub-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .body {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    justify-content: center;
+  }
+}
+
+.guess-image-container .guess-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .guess-image-container {
+    width: 600px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+}
+
+/*Tab Items */
+
+.tab-list-container {
+  display: flex;
+  width: 260px;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 767px) {
+  .tab-list-container {
+    width: 300px;
+  }
+}
+
+/* Tab Images */
+
+.tab-images-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 5px;
+  max-width: 900px;
+}
+
+/* Game Over */
+
+.game-over-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png');
+  height: 550px;
+  width: 95%;
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .game-over-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png');
+    background-size: cover;
+    height: 650px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .game-over-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png');
+    background-size: cover;
+    height: 650px;
+    width: 40%;
+    padding-bottom: 20px;
+  }
+}
+
+.trophy-icon {
+  width: 300px;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 767px) {
+  .trophy-icon {
+    width: 330px;
+  }
+}
+
+.your-score-text {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.user-score {
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 500;
+  margin-top: 5px;
+  font-family: 'Roboto';
+  margin-bottom: 20px;
+}
+
+.restart-button {
+  border: 0;
+  background-color: #cf60c8;
+  border-radius: 10px;
+  height: 55px;
+  width: 150px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Roboto';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.restart-button:hover {
+  box-shadow: 0px 20px 30px 0px #00000030;
+  cursor: pointer;
+  outline: none;
+}
+
+.reset-icon {
+  width: 22px;
+}
+
+.popup-container {
+  position: absolute;
+  height: 400px;
+  width: 320px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background: radial-gradient(#76b2fe, #b69efe);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 10px 15px 0px #ffffff30;
+}
+
+@media screen and (min-width: 992px) {
+  .popup-container {
+    height: 450px;
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .popup-container {
+    height: 420px;
+    width: 450px;
+  }
+
+  .game-controller-icon {
+    top: -8vmin !important;
+  }
+}
+
+.body-blur {
+  filter: blur(25px);
+}
+
+.game-name {
+  font-family: opt;
+  font-style: normal;
+  font-size: 30px;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgb(233, 229, 229),
+    rgb(247, 219, 186)
+  );
+  background-clip: text;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: sans-serif;
+}
+
+@media screen and (min-width: 992px) {
+  .game-name {
+    font-size: 40px;
+  }
+}
+
+.start-game-button {
+  border: 0;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  transition: all 0.5s linear;
+  font-weight: 500;
+  font-family: cursive;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+.start-game-button:hover {
+  background-image: linear-gradient(-135deg, #f086de, #e9a97f 33%, #cde0df);
+  box-shadow: 0px 10px 15px 0px #00000030;
+  color: #ffffff;
+}
+
+.game-controller-icon {
+  position: absolute;
+  width: 130px;
+  top: -15vmin;
+  left: -5vmin;
+}
+
+@media screen and (min-width: 992px) {
+  .game-controller-icon {
+    top: -7vmin;
+    left: -5vmin;
+    width: 150px;
+  }
+}
+
+.game-instructions-container {
+  list-style-type: disc;
+  padding: 0px;
+  margin-left: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 767px) {
+  .game-instructions-container {
+    width: 350px;
+  }
+}
+
+.instruction {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-bottom: 15px;
+  width: 250px;
+}
+
+@media screen and (min-width: 992px) {
+  .instruction {
+    width: 350px;
+    margin-bottom: 20px;
+    font-size: 19px;
+  }
+}
