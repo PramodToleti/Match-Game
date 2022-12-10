@@ -1,7 +1,9 @@
 import './index.css'
 import {Component} from 'react'
+import NavBar from '../NavBar'
 import TabItem from '../TabItem'
 import DisplayItem from '../DisplayItem'
+import Popup from '../Popup'
 
 const tabsList = [
   {tabId: 'FRUIT', displayText: 'Fruits'},
@@ -265,7 +267,6 @@ class MatchGame extends Component {
     this.setState({
       isPopupLoaded: true,
     })
-    document.getElementById('audio')
   }
 
   checkThumbnail = id => {
@@ -410,67 +411,16 @@ class MatchGame extends Component {
     const bodyBlurStyle = isPopupLoaded ? 'body-blur' : ''
     return (
       <>
-        <nav className="nav-bar">
-          <div className="nav-header">
-            <div className="game-icon-container">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png"
-                alt="website logo"
-                className="website-logo"
-              />
-            </div>
-            <div className="score-details-container">
-              <div className="score-container">
-                <h1 className="score-heading">Score: </h1>
-                <p className="score">{score}</p>
-              </div>
-              <div className="timer-container">
-                <img
-                  src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png"
-                  alt="timer"
-                  className={`timer-icon ${clockShake}`}
-                />
-                <p className={`timer-value ${timerColor}`}>{timer} sec</p>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <NavBar
+          score={score}
+          timer={timer}
+          timerColor={timerColor}
+          clockShake={clockShake}
+        />
 
         <div className="bg-container">
           <div className={`body ${bodyBlurStyle}`}>{this.renderGame()}</div>
-          {isPopupLoaded && (
-            <>
-              <div className="popup-container">
-                <img
-                  src="https://res.cloudinary.com/dlpgowt5s/image/upload/v1670525912/casual-life-3d-game-controller_mt1jnm.png"
-                  alt="game-icon"
-                  className="game-controller-icon"
-                />
-                <h1 className="game-name">Match Game</h1>
-                <ul className="game-instructions-container">
-                  <li className="instruction">
-                    You have 60 secs maximum time limit
-                  </li>
-                  <li className="instruction">
-                    Try to match the correct image
-                  </li>
-                  <li className="instruction">
-                    +1 point for every correct answer
-                  </li>
-                  <li className="instruction">
-                    If answer is incorrect or time runs out, game ends
-                  </li>
-                </ul>
-                <button
-                  type="button"
-                  className="start-game-button"
-                  onClick={this.onStartGame}
-                >
-                  Play
-                </button>
-              </div>
-            </>
-          )}
+          <Popup isPopupLoaded={isPopupLoaded} onStartGame={this.onStartGame} />
         </div>
       </>
     )
