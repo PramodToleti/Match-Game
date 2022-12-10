@@ -4,6 +4,7 @@
   font-size: 18px;
   font-weight: 600;
   padding-bottom: 10px;
+  transition: all 0.5s linear;
 }
 
 @media screen and (min-width: 767px) {
@@ -26,4 +27,8 @@
   background-color: transparent;
   cursor: pointer;
   outline: none;
+}
+
+.tab-name:hover {
+  color: #fec653;
 }

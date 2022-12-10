@@ -6,11 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 20px 40px 0px #00000030;
 }
 
 @media screen and (min-width: 767px) {
   .nav-bar {
-    height: 12vh;
+    height: 10.5vh;
   }
 }
 
@@ -129,7 +130,7 @@
 /* Body */
 
 .bg-container {
-  min-height: 100vh;
+  min-height: 92vh;
   background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-bg.png');
   background-size: cover;
   display: flex;
@@ -138,11 +139,18 @@
   align-items: center;
 }
 
+@media screen and (min-width: 767px) {
+  .bg-container {
+    max-height: 90vh;
+  }
+}
+
 .body {
-  min-height: 90vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-bottom: 20px;
   margin-top: 20px;
 }
@@ -181,6 +189,7 @@
 .guess-image-container .guess-image {
   width: 100%;
   border-radius: 5px;
+  box-shadow: 10px 10px 20px 0px #00000050;
 }
 
 @media screen and (min-width: 992px) {
@@ -225,36 +234,28 @@
 /* Game Over */
 
 .game-over-container {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png');
-  height: 550px;
-  width: 95%;
+  background-image: radial-gradient(#f588d8, #c0a3e5);
+  height: 480px;
+  width: 90%;
   border-radius: 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
   padding-bottom: 20px;
 }
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
   .game-over-container {
-    background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png');
-    background-size: cover;
-    height: 650px;
+    height: 540px;
     width: 70%;
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
+    padding-top: 40px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .game-over-container {
-    background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png');
-    background-size: cover;
-    height: 650px;
+    height: 540px;
     width: 40%;
     padding-bottom: 20px;
   }
@@ -262,7 +263,6 @@
 
 .trophy-icon {
   width: 300px;
-  margin-top: 60px;
 }
 
 @media screen and (min-width: 767px) {
@@ -280,7 +280,7 @@
 }
 
 .user-score {
-  color: #ffffff;
+  color: #fec653;
   font-size: 45px;
   font-weight: 500;
   margin-top: 5px;
@@ -332,8 +332,8 @@
 
 @media screen and (min-width: 992px) {
   .popup-container {
-    height: 450px;
-    width: 500px;
+    height: 400px;
+    width: 450px;
   }
 }
 
@@ -365,7 +365,7 @@
   background-clip: text;
   font-weight: 500;
   margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-family: sans-serif;
 }
 
@@ -405,7 +405,7 @@
   .game-controller-icon {
     top: -7vmin;
     left: -5vmin;
-    width: 150px;
+    width: 130px;
   }
 }
 
@@ -435,6 +435,10 @@
   .instruction {
     width: 350px;
     margin-bottom: 20px;
-    font-size: 19px;
+    font-size: 16px;
   }
+}
+
+.play-image {
+  width: 30px;
 }

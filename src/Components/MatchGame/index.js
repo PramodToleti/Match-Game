@@ -248,13 +248,15 @@ const imagesList = [
   },
 ]
 
+const random = Math.floor(Math.random() * imagesList.length)
+
 class MatchGame extends Component {
   state = {
     activeTabId: tabsList[0].tabId,
     score: 0,
     timer: 60,
-    guessImageUrl: imagesList[0].imageUrl,
-    guessImageId: imagesList[0].id,
+    guessImageUrl: imagesList[random].imageUrl,
+    guessImageId: imagesList[random].id,
     isGameOver: false,
     isPopupLoaded: false,
   }
@@ -263,6 +265,7 @@ class MatchGame extends Component {
     this.setState({
       isPopupLoaded: true,
     })
+    document.getElementById('audio')
   }
 
   checkThumbnail = id => {
@@ -307,6 +310,7 @@ class MatchGame extends Component {
       score: 0,
       guessImageUrl: imagesList[randomIndex].imageUrl,
       guessImageId: imagesList[randomIndex].id,
+      activeTabId: tabsList[0].tabId,
     })
     this.timerId = setInterval(() => {
       const {timer} = this.state
@@ -444,15 +448,17 @@ class MatchGame extends Component {
                 />
                 <h1 className="game-name">Match Game</h1>
                 <ul className="game-instructions-container">
-                  <li className="instruction">Max Time Limit is 60 sec</li>
+                  <li className="instruction">
+                    You have 60 secs maximum time limit
+                  </li>
                   <li className="instruction">
                     Try to match the correct image
                   </li>
                   <li className="instruction">
-                    +1 point for every correct guess
+                    +1 point for every correct answer
                   </li>
                   <li className="instruction">
-                    Game will be over on incorrect answer or after time limit
+                    If answer is incorrect or time runs out, game ends
                   </li>
                 </ul>
                 <button
